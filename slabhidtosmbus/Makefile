@@ -56,7 +56,7 @@ INCLUDES ?= -I$(PUBLICHEADERSPATH) -I./common/include/ -I./common/linux/
 INCLUDES += $(foreach depcflgs,$(PKG_CONFIG_DEPENDENCIES), `pkg-config $(depcflgs) --cflags`)
 
 LIBS     += $(foreach deplib,$(PKG_CONFIG_DEPENDENCIES), `pkg-config --libs $(deplib)`)
-LIBS     += -lslabhiddevice
+LIBS     += -L../slabhiddevice/build/lib/$(CPU_ARCH) -lslabhiddevice
 
 VPATH+=$(LIB_BASE_NAME)/src ./common/src ./common/linux
 
