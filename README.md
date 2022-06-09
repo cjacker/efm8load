@@ -6,6 +6,8 @@ However, if run the `efm8load.py` on Linux directly, it will throw some errors b
 
 This repo collected all related source codes together and provide a Makefile to build them.
 
+Official source package from Silicon Labs did not provide a LICENSE file. since the sources contains 'hidapi.h' and 'hid-libusb.c' from [hidapi](https://github.com/signal11/hidapi), that means the source codes opened by Silicon Labs should follow same license of hidapi project.
+
 
 # Usage:
 
