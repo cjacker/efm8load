@@ -14,9 +14,9 @@ import sys
 
 # EFM8 bootloader VID/PID values
 EFM8_LOADERS = [
-    (0x10C4, 0xEAC9),  // EFM8UB1
-    (0x10C4, 0xEACA),  // EFM8UB2
-    (0x10C4, 0xEACB)   // EFM8UB3
+    (0x10C4, 0xEAC9),  # EFM8UB1
+    (0x10C4, 0xEACA),  # EFM8UB2
+    (0x10C4, 0xEACB)   # EFM8UB3
 ]
 
 # Dictionary maps library return codes to description string
