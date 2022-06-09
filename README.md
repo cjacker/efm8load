@@ -1,4 +1,4 @@
-# efmload - official EFM8 bootloader download utility with all source codes collected
+# efm8load - official EFM8 bootloader download utility with all source codes collected
 
 EFM8 Factory Bootloader package [AN945SW](https://www.silabs.com/documents/public/example-code/AN945SW.zip) contains all EFM8 bootloader images with UART, USB or SMBus interface. The source of the efm8load tool, a python script `efm8load.py` is also included under /Tools/Source folder. Since Python is a cross-platform language, and therefore the script can run on a Linux system.
 
