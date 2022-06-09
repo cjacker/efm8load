@@ -11,3 +11,5 @@ all:
 clean:
 	rm -f ./libslabhiddevice.so.1.0
 	rm -f ./libslabhidtosmbus.so.1.0
+	rm -rf ./slabhiddevice/build
+	rm -rf ./slabhidtosmbus/build
