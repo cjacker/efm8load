@@ -10,13 +10,13 @@ However, if run the `efm8load.py` on Linux directly, it will throw some errors b
 This repo collected all related source codes together and provide a Makefile to build them.
 
 # LICENSE
-Official source package from Silicon Labs did not provide a LICENSE file. since the sources contains 'hidapi.h' and 'hid-libusb.c' from [hidapi](https://github.com/signal11/hidapi), that means the source codes opened by Silicon Labs should follow same license of hidapi project, either BSD or 
+Official source package from Silicon Labs did not provide a LICENSE file. since the sources contains 'hidapi.h' and 'hid-libusb.c' from [hidapi](https://github.com/signal11/hidapi), that means the source codes opened by Silicon Labs should follow same license of hidapi project.
 
-hex2boot.py follows intelhex license/BSD license:
+hex2boot.py follows intelhex license (BSD license):
 ![screenshot-2022-06-10-09-13-34](https://user-images.githubusercontent.com/1625340/172971337-7fccc873-dfe8-429a-9a7d-99b3002631a8.png)
 
 
-efm8load.py follows pyserial license/BSD license.
+efm8load.py follows pyserial license (BSD license):
 ![screenshot-2022-06-10-09-13-51](https://user-images.githubusercontent.com/1625340/172971351-11702137-a6a8-4275-82c2-4e5708d49d3f.png)
 
 # Usage:
