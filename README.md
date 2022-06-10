@@ -2,8 +2,8 @@
 
 EFM8 Factory Bootloader package [AN945SW](https://www.silabs.com/documents/public/example-code/AN945SW.zip) contains all EFM8 bootloader images with UART, USB or SMBus interface. And various utilities such as:
 
-- hex2boot.py : Hex to Hex to EFM8 Bootload Record conversion utility
-- efm8load.py : EFM8 bootloader download utility
+- hex2boot : Hex to Hex to EFM8 Bootload Record conversion utility
+- efm8load : EFM8 bootloader download utility
 
 However, if run the `efm8load.py` on Linux directly, it will throw some errors because hidport.py or smbport.py need to load 'libslabhiddevice.so.1.0' and  'libslabhiddevice.so.1.0' not provided in same package. And this libs and source codes provided in [USBXpressHostSDK for Linux](https://www.silabs.com/documents/public/software/USBXpressHostSDK-Linux.tar).
 
