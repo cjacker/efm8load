@@ -1,0 +1,2 @@
+#!/bin/sh
+python PREFIX/efm8load/efm8load.py "$@"

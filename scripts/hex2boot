@@ -1,0 +1,3 @@
+#!/bin/sh
+python PREFIX/efm8load/hex2boot.py "$@"
+
