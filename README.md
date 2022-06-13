@@ -25,9 +25,9 @@ efm8load.py follows pyserial license (BSD license):
 $ git clone https://github.com/cjacker/efm8load.git
 $ cd efm8load
 $ make
-$ export LD_LIBRARY_PATH=`pwd`:$LD_LIBRARY_PATH
-$ python hex2boot.py filename.hex -o filename.efm8
-$ sudo python efm8load.py -p /dev/ttyUSB0 filename.efm8
+$ make install DESTDIR= PREFIX=/usr
+$ hex2boot filename.hex -o filename.efm8
+$ efm8load -p /dev/ttyUSB0 -t filename.efm8
 ```
 
 Change the `/dev/ttyUSB0` to match you device.
