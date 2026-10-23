@@ -1,5 +1,11 @@
 #!/usr/bin/env python
 
+# LICENSE:
+# This program is from https://github.com/cjacker/efm8load
+# No explicit copyright statement is present in the source code, however the
+# README in the same repository says this file follows the python-intelhex license
+# which is the BSD 3-Clause license: https://opensource.org/license/bsd-3-clause
+
 """
 usage: hex2boot.py [-h] [-v] -o OUT [-b {0,1}] [-e {0,1,2}] [-i [ID [ID ...]]]
                    [-l LOCK] [-m {bb2,sb2,ub1}] [-s ADDR] [-t ADDR] [-w]
@@ -126,7 +132,7 @@ def regions(type):
     
 def get_regions(org, top, type):
     for start, stop, page in regions(type):
-        if max(org, start) < min(top, stop):
+        if max(org, start) <= min(top, stop):
             yield max(org, start), min(top, stop), page
 
 def mem2boot(brec, ih, page=512, erase=2):
@@ -169,7 +175,7 @@ def hex2boot(brec, args):
         if failsafe and resetv != 0xFF:
             ih[0] = 0xFF
         for start, stop, page in get_regions(args.start, args.top, args.map):
-            mem2boot(brec, ih[slice(start, stop)], page, args.erase)
+            mem2boot(brec, ih[slice(start, stop+1)], page, args.erase)
         if failsafe and resetv != 0xFF:
             brec.write(bin_write(0, bytearray([resetv])))
     elif args.lock is None:
